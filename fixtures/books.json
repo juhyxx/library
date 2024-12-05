@@ -1,0 +1,292 @@
+[
+    {
+        "model": "api.book",
+        "pk": 1,
+        "fields": {
+            "title": "To Kill a Mockingbird",
+            "author": "Harper Lee",
+            "published_date": "1960-07-11",
+            "isbn": "9780061120084"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 2,
+        "fields": {
+            "title": "1984",
+            "author": "George Orwell",
+            "published_date": "1949-06-08",
+            "isbn": "9780451524935"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 3,
+        "fields": {
+            "title": "The Great Gatsby",
+            "author": "F. Scott Fitzgerald",
+            "published_date": "1925-04-10",
+            "isbn": "9780743273565"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 4,
+        "fields": {
+            "title": "Moby-Dick",
+            "author": "Herman Melville",
+            "published_date": "1851-10-18",
+            "isbn": "9781503280786"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 5,
+        "fields": {
+            "title": "Beloved",
+            "author": "Toni Morrison",
+            "published_date": "1987-09-16",
+            "isbn": "9781400033416"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 6,
+        "fields": {
+            "title": "The Catcher in the Rye",
+            "author": "J.D. Salinger",
+            "published_date": "1951-07-16",
+            "isbn": "9780316769488"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 7,
+        "fields": {
+            "title": "The Grapes of Wrath",
+            "author": "John Steinbeck",
+            "published_date": "1939-04-14",
+            "isbn": "9780143039433"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 8,
+        "fields": {
+            "title": "Invisible Man",
+            "author": "Ralph Ellison",
+            "published_date": "1952-04-14",
+            "isbn": "9780679732761"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 9,
+        "fields": {
+            "title": "The Road",
+            "author": "Cormac McCarthy",
+            "published_date": "2006-09-26",
+            "isbn": "9780307387899"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 10,
+        "fields": {
+            "title": "Catch-22",
+            "author": "Joseph Heller",
+            "published_date": "1961-11-10",
+            "isbn": "9781451626650"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 11,
+        "fields": {
+            "title": "Slaughterhouse-Five",
+            "author": "Kurt Vonnegut",
+            "published_date": "1969-03-31",
+            "isbn": "9780385333849"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 12,
+        "fields": {
+            "title": "The Color Purple",
+            "author": "Alice Walker",
+            "published_date": "1982-02-01",
+            "isbn": "9780156028356"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 13,
+        "fields": {
+            "title": "The Outsiders",
+            "author": "S.E. Hinton",
+            "published_date": "1967-04-24",
+            "isbn": "9780142407332"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 14,
+        "fields": {
+            "title": "The Sun Also Rises",
+            "author": "Ernest Hemingway",
+            "published_date": "1926-10-22",
+            "isbn": "9780743297331"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 15,
+        "fields": {
+            "title": "A Streetcar Named Desire",
+            "author": "Tennessee Williams",
+            "published_date": "1947-12-03",
+            "isbn": "9780811214464"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 16,
+        "fields": {
+            "title": "The Bell Jar",
+            "author": "Sylvia Plath",
+            "published_date": "1963-01-14",
+            "isbn": "9780060837020"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 17,
+        "fields": {
+            "title": "To the Lighthouse",
+            "author": "Virginia Woolf",
+            "published_date": "1927-05-05",
+            "isbn": "9780156907392"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 18,
+        "fields": {
+            "title": "On the Road",
+            "author": "Jack Kerouac",
+            "published_date": "1957-09-05",
+            "isbn": "9780140283297"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 19,
+        "fields": {
+            "title": "The Sound and the Fury",
+            "author": "William Faulkner",
+            "published_date": "1929-10-07",
+            "isbn": "9780679732242"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 20,
+        "fields": {
+            "title": "A Tree Grows in Brooklyn",
+            "author": "Betty Smith",
+            "published_date": "1943-04-01",
+            "isbn": "9780060736262"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 21,
+        "fields": {
+            "title": "Native Son",
+            "author": "Richard Wright",
+            "published_date": "1940-03-01",
+            "isbn": "9780061130244"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 22,
+        "fields": {
+            "title": "The Scarlet Letter",
+            "author": "Nathaniel Hawthorne",
+            "published_date": "1850-03-16",
+            "isbn": "9780451531346"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 23,
+        "fields": {
+            "title": "Fahrenheit 451",
+            "author": "Ray Bradbury",
+            "published_date": "1953-10-19",
+            "isbn": "9781451673319"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 24,
+        "fields": {
+            "title": "The Call of the Wild",
+            "author": "Jack London",
+            "published_date": "1903-08-01",
+            "isbn": "9780451530929"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 25,
+        "fields": {
+            "title": "The Adventures of Huckleberry Finn",
+            "author": "Mark Twain",
+            "published_date": "1884-12-10",
+            "isbn": "9780142437179"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 26,
+        "fields": {
+            "title": "Little Women",
+            "author": "Louisa May Alcott",
+            "published_date": "1868-09-30",
+            "isbn": "9780143106696"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 28,
+        "fields": {
+            "title": "The Handmaid's Tale",
+            "author": "Margaret Atwood",
+            "published_date": "1985-08-01",
+            "isbn": "9780385490818"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 29,
+        "fields": {
+            "title": "The Fountainhead",
+            "author": "Ayn Rand",
+            "published_date": "1943-05-07",
+            "isbn": "9780452011827"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 30,
+        "fields": {
+            "title": "The Alchemist",
+            "author": "Paulo Coelho",
+            "published_date": "1988-05-01",
+            "isbn": "9780061122415"
+        }
+    }
+]
