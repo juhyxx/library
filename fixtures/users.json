@@ -1,0 +1,42 @@
+[
+    {
+        "model": "api.libuser",
+        "pk": 1,
+        "fields": {
+            "email": "neil.armstrong@nasa.gov",
+            "name": "Neil Armstrong"
+        }
+    },
+    {
+        "model": "api.libuser",
+        "pk": 2,
+        "fields": {
+            "email": "buzz.aldrin@nasa.gov",
+            "name": "Buzz Aldrin"
+        }
+    },
+    {
+        "model": "api.libuser",
+        "pk": 3,
+        "fields": {
+            "email": "sally.ride@nasa.gov",
+            "name": "Sally Ride"
+        }
+    },
+    {
+        "model": "api.libuser",
+        "pk": 4,
+        "fields": {
+            "email": "john.glenn@nasa.gov",
+            "name": "John Glenn"
+        }
+    },
+    {
+        "model": "api.libuser",
+        "pk": 5,
+        "fields": {
+            "email": "mae.jemison@nasa.gov",
+            "name": "Mae Jemison"
+        }
+    }
+]

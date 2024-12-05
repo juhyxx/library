@@ -1,38 +1,34 @@
-from rest_framework import generics
-from api.models import LibUser, Book, Libload
-from api.serializers import (
-    UserSerializer,
-    BookSerializer,
-    LibloadSerializer,
-)
-from rest_framework.response import Response
-from rest_framework import status
-from rest_framework.views import APIView
-from rest_framework.exceptions import NotFound
+from api.models import Book
+from api.serializers import BookSerializer
+
+
 from django.http import HttpRequest
+from rest_framework import status
+from rest_framework.exceptions import NotFound, PermissionDenied
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 
-class UserListCreateView(generics.ListCreateAPIView):
-    queryset = LibUser.objects.all()
-    serializer_class = UserSerializer
-
-
-class BookView(APIView):
+class BooksView(APIView):
     def get(self, _, id: int = None) -> Response:
         if id:
             try:
                 book = Book.objects.get(id=id)
+                if not book.active:
+                    raise PermissionDenied(detail="Book in not active")
                 serializer = BookSerializer(book)
                 return Response(serializer.data, status=status.HTTP_200_OK)
             except Book.DoesNotExist:
                 raise NotFound(detail="Book not found")
         else:
-            books = Book.objects.all()
+            books = Book.objects.filter(active=True)
             serializer = BookSerializer(books, many=True)
             return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request: HttpRequest) -> Response:
-        serializer = BookSerializer(data=request.data)
+        data = request.data
+        data.pop("active", None)
+        serializer = BookSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -44,6 +40,10 @@ class BookView(APIView):
 
         try:
             book = Book.objects.get(id=id)
+            if not book.active:
+                raise PermissionDenied(detail="Book in not active")
+            data = request.data
+            data.pop("active", None)
             serializer = BookSerializer(instance=book, data=request.data)
             if serializer.is_valid():
                 serializer.save()
@@ -55,14 +55,13 @@ class BookView(APIView):
     def delete(self, _, id: int) -> Response:
         if not id:
             return Response(status=status.HTTP_400_BAD_REQUEST)
+
         try:
             book = Book.objects.get(id=id)
-            book.delete()
+            if not book.active:
+                raise PermissionDenied(detail="Book in not active")
+            book.active = False
+            book.save()
             return Response(status=status.HTTP_204_NO_CONTENT)
         except Book.DoesNotExist:
             raise NotFound(detail="Book not found")
-
-
-class LibloadListCreateView(generics.ListCreateAPIView):
-    queryset = Libload.objects.all()
-    serializer_class = LibloadSerializer

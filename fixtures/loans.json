@@ -1,0 +1,52 @@
+[
+    {
+        "model": "api.loan",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "book": 4,
+            "borrowed_date": "2024-07-11",
+            "return_date": "2024-08-11"
+        }
+    },
+    {
+        "model": "api.loan",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "book": 4,
+            "borrowed_date": "2024-09-11",
+            "return_date": null
+        }
+    },
+    {
+        "model": "api.loan",
+        "pk": 3,
+        "fields": {
+            "user": 2,
+            "book": 5,
+            "borrowed_date": "2024-09-11",
+            "return_date": null
+        }
+    },
+    {
+        "model": "api.loan",
+        "pk": 4,
+        "fields": {
+            "user": 2,
+            "book": 6,
+            "borrowed_date": "2024-09-11",
+            "return_date": null
+        }
+    },
+    {
+        "model": "api.loan",
+        "pk": 5,
+        "fields": {
+            "user": 3,
+            "book": 8,
+            "borrowed_date": "2024-09-11",
+            "return_date": null
+        }
+    }
+]

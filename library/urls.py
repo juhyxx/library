@@ -1,7 +1,9 @@
 from django.contrib import admin
 from django.urls import path
-from api.views import UserListCreateView, LibloadListCreateView
-from api.views import BookView
+from api.views.library_view import borrowed, free
+from api.views.loans_view import LoansView
+from api.views.books_view import BooksView
+from api.views.users_view import UsersView
 
 """
 URL configuration for library project.
@@ -24,8 +26,12 @@ from django.urls import path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/users/", UserListCreateView.as_view(), name="user-list-create"),
-    path("api/books/", BookView.as_view(), name="book-list"),
-    path("api/books/<int:id>/", BookView.as_view(), name="book-id"),
-    path("api/libloads/", LibloadListCreateView.as_view(), name="libload-list-create"),
+    path("api/users/", UsersView.as_view(), name="users"),
+    path("api/users/<int:id>/", UsersView.as_view(), name="users"),
+    path("api/books/", BooksView.as_view(), name="book-list"),
+    path("api/books/<int:id>/", BooksView.as_view(), name="book-id"),
+    path("api/loans/", LoansView.as_view(), name="loans"),
+    path("api/books/free", free, name="loans"),
+    path("api/books/borrowed", borrowed, name="loans"),
+    
 ]
