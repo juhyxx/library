@@ -35,7 +35,7 @@ class BooksView(ModelViewSet):
         loan = Loan.objects.filter(book=instance, to_date=None).first()
         if loan:
             loan_data = LoanSerializer(loan).data
-            
+
             headers["x-user-id"] = loan_data.pop("user", None)
             result_data["from_date"] = loan_data.get("from_date")
 
