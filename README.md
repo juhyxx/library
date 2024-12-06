@@ -121,19 +121,19 @@ call ```POST /api/loans/``` with data
 
 ## How to return a book
 
-call ```GET api/loans/1/return_book/``` where 1 is loan id.
+call ```GET /api/loans/1/return_book/``` where 1 is loan id.
 
 ## Get borrowed books
 
-call ```GET http://localhost:8000/api/books/borrowed/```
+call ```GET /api/books/borrowed/```
 
 
 ## Get unborowed books
 
-call ```GET http://localhost:8000/api/books/free/```
+call ```GET /api/books/free/```
 
 
 Everything else is standart behavior as could be except Loans, because from logical reasons it is not allowed to edit Loans.
 
 ## Get user who lend the book
-call ```GET api/books/1/``` It returns data and user Id in header **x-user-id**.
+call ```GET /api/books/1/``` It returns data and user Id in header **x-user-id**.
