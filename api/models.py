@@ -1,3 +1,4 @@
+from datetime import date
 from django.db import models
 
 
@@ -24,8 +25,12 @@ class Book(models.Model):
 class Loan(models.Model):
     user = models.ForeignKey(LibUser, on_delete=models.CASCADE)
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
-    borrowed_date = models.DateField(null=True, blank=True)
-    return_date = models.DateField(null=True, blank=True)
+    from_date = models.DateField(null=True, blank=True)
+    to_date = models.DateField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.user.email} borrowed {self.book.title}"
+
+    def return_book(self):
+        self.to_date = date.today()
+        self.save()

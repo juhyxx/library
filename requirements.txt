@@ -10,6 +10,7 @@ click==8.1.7
 crashtest==0.4.1
 distlib==0.3.9
 Django==5.1.4
+django-rich==1.13.0
 djangorestframework==3.15.2
 dulwich==0.21.7
 fastjsonschema==2.21.1
